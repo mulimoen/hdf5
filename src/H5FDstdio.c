@@ -313,6 +313,9 @@ H5Pset_fapl_stdio(hid_t fapl_id)
     return H5Pset_driver(fapl_id, H5FD_STDIO, NULL);
 } /* end H5Pset_fapl_stdio() */
 
+
+_Static_assert(sizeof(file_offset_t) >= sizeof(size_t), "file_offset_t > size_t");
+
 /*-------------------------------------------------------------------------
  * Function:  H5FD_stdio_open
  *
