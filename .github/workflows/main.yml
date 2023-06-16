@@ -146,6 +146,10 @@ jobs:
           echo "CC=gcc" >> $GITHUB_ENV
         if:  matrix.os == 'windows-latest'
 
+      - name: Print stuff
+        shell: bash
+        run: ls /usr
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Get Sources
         uses: actions/checkout@v3
