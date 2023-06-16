@@ -198,7 +198,7 @@ jobs:
 
       - name: Print h5einit.h
         shell: bash
-        run: echo src/H5Einit.h
+        run: cat src/H5Einit.h
         working-directory: ${{ runner.workspace }}/build
 
       #
