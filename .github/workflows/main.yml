@@ -148,7 +148,7 @@ jobs:
 
       - name: Print stuff
         shell: bash
-        run: ls /usr
+        run: ls /usr && type gcc && ldd $(type --path gcc)
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Get Sources
